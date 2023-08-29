@@ -1,0 +1,26 @@
+.btm {}
+
+#b0 {
+    padding-inline: 50px;
+}
+
+.spacer {
+    clear: left;
+}
+
+.input2 {
+    float: unset;
+}
+
+.oprtr {
+    width: 50px;
+    height: 70px;
+}
+
+#window {
+    width: 250px;
+    height: 100px;
+    background-color: rgb(184, 183, 183);
+    border: solid black 2px;
+    margin-bottom: 30px;
+}

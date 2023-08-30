@@ -447,3 +447,46 @@
 // console.log(obj.name);
 
 //---------------------------------------------
+
+// function a(x, y) {
+//     let result;
+//     result = x + y;
+//     console.log(result);
+//     return result;
+// }
+
+// a(34, 25);
+
+// let b = function (x, y) {
+//     let result;
+//     result = x - y;
+//     console.log(result);
+//     return result;
+// };
+
+// b(3, 5);
+
+// (function (x, y) {
+
+//     function multiple() {
+//         let result;
+//         result = x * y;
+//         return console.log(result);
+
+//     };
+
+//     window.sth = multiple();//这行命令可以将function multiple暴露在全域里面.
+
+// })(3, 3);// 这个就是IIFE, 立即执行函数表达式. 也可叫匿名函数.
+
+// console.log(sth());
+
+// (function (a) {
+//     let x = "hello! ";
+//     console.log(x + a);
+//     window.a = function () { console.log(x) };
+//     //同理,用window.名字 = IIFE 方程中的某项向外暴露.
+// })("world!")
+
+// a();
+

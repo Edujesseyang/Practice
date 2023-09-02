@@ -490,3 +490,62 @@
 
 // a();
 
+//---------------------------------------------------------------------------
+
+//用简单的html来写一些event listener. 这种方法会让html 的文件变得很混乱,
+//所以可以用另一种方法来制作event listener.
+
+// function clicked() {
+//     let age = document.getElementById("age").value;
+//     let input = document.getElementById("input").value;
+//     let output;
+//     if (age === "" || input === "") {
+//         output = "Please input your correct information!";
+//     } else {
+//         output = "Your name is <h2 style='color:red; display:inline-block'>" + input
+//             + "</h2>, </br>Your age is <h1 style='color:green display:inline-block'>" + age + "</h1> years old.";
+//     }
+//     document.getElementById("content").innerHTML = output;
+// }
+
+// function mouse() {
+//     let btn = document.getElementById("button");
+//     btn.style.color = "red";
+
+// }
+
+// function press() {
+//     let btn = document.getElementById("button");
+
+
+//     btn.style.color = "blue";
+
+//     document.getElementById("input").value = "请输入";
+
+// }
+
+//-----------------------------------------------------------------------------
+//另一种制作enent listener 的方法.
+let btn = document.getElementById("button");
+btn.addEventListener("click", function () {
+   
+    btn.style.color = "red";
+})
+
+document.getElementById("age").addEventListener("focus", function () {
+    let spaceHolder = document.getElementById("age");
+    spaceHolder.value = "23523523525";
+})
+
+document.querySelector("input").addEventListener("blur", function () {
+    document.getElementById("content").innerHTML = "<h1>WHAT FUCK DO YOU WANT, BRUH?</h1>";
+})
+
+function changeIt() {
+    let ctt = document.getElementById("content");
+    ctt.innerText = "fuck shit!";
+}
+
+btn.onclick = changeIt;
+
+// btn.addEventListener("click", changeIt);

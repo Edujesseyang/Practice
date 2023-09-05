@@ -673,68 +673,74 @@ input.addEventListener("keydown",
 );
 
 
-input.addEventListener("focus",
-    function () {
-        // while (true) {
-        setTimeout(function () {
-            guai.src = "img/guai.png"
-            guai.style.left = 310 + "px";
-        }, 500)
-        setTimeout(function () {
-            guai.style.left = 350 + "px";
-        }, 1000)
-        setTimeout(function () {
-            guai.style.left = 410 + "px";
-        }, 1500)
-        setTimeout(function () {
-            guai.style.left = 450 + "px";
-        }, 2000)
-        setTimeout(function () {
-            guai.style.left = 510 + "px";
-        }, 2500)
-        setTimeout(function () {
-            guai.style.left = 550 + "px";
-        }, 3000)
-        setTimeout(function () {
-            guai.style.left = 610 + "px";
-        }, 3500)
-        setTimeout(function () {
-            guai.style.left = 650 + "px";
-        }, 4000)
-        setTimeout(function () {
-            guai.style.left = 710 + "px";
-        }, 4500)
 
-        setTimeout(function () {
-            guai.src = "img/guai2.png"
-            guai.style.left = 710 + "px";
-        }, 4500)
-        setTimeout(function () {
-             guai.style.left = 650 + "px";
-        }, 5000)
-        setTimeout(function () {
-            guai.style.left = 600 + "px";
-        }, 5500)
-        setTimeout(function () {
-            guai.style.left = 550 + "px";
-        }, 6000)
-        setTimeout(function () {
-            guai.style.left = 500 + "px";
-        }, 6500)
-        setTimeout(function () {
-            guai.style.left = 450 + "px";
-        }, 7000)
-        setTimeout(function () {
-            guai.style.left = 400 + "px";
-        }, 7500)
-        setTimeout(function () {
-            guai.style.left = 350 + "px";
-        }, 8000)
-        setTimeout(function () {
-            guai.style.left = 310 + "px";
-        }, 8500)
-        setTimeout(function () {
-            guai.style.left = 248 + "px";
-        }, 8500)
-        // }
-    });
+    input.addEventListener("focus",
+        function () {
+            
+            setInterval(function walk() {
+
+                setTimeout(function () {
+                    guai.src = "img/guai.png"
+                    guai.style.left = 310 + "px";
+                }, 500)
+                setTimeout(function () {
+                    guai.style.left = 350 + "px";
+                }, 1000)
+                setTimeout(function () {
+                    guai.style.left = 410 + "px";
+                }, 1500)
+                setTimeout(function () {
+                    guai.style.left = 450 + "px";
+                }, 2000)
+                setTimeout(function () {
+                    guai.style.left = 510 + "px";
+                }, 2500)
+                setTimeout(function () {
+                    guai.style.left = 550 + "px";
+                }, 3000)
+                setTimeout(function () {
+                    guai.style.left = 610 + "px";
+                }, 3500)
+                setTimeout(function () {
+                    guai.style.left = 650 + "px";
+                }, 4000)
+                setTimeout(function () {
+                    guai.style.left = 710 + "px";
+                }, 4500)
+
+                setTimeout(function () {
+                    guai.src = "img/guai2.png"
+                    guai.style.left = 710 + "px";
+                }, 4500)
+                setTimeout(function () {
+                    guai.style.left = 650 + "px";
+                }, 5000)
+                setTimeout(function () {
+                    guai.style.left = 600 + "px";
+                }, 5500)
+                setTimeout(function () {
+                    guai.style.left = 550 + "px";
+                }, 6000)
+                setTimeout(function () {
+                    guai.style.left = 500 + "px";
+                }, 6500)
+                setTimeout(function () {
+                    guai.style.left = 450 + "px";
+                }, 7000)
+                setTimeout(function () {
+                    guai.style.left = 400 + "px";
+                }, 7500)
+                setTimeout(function () {
+                    guai.style.left = 350 + "px";
+                }, 8000)
+                setTimeout(function () {
+                    guai.style.left = 310 + "px";
+                }, 8500)
+                setTimeout(function () {
+                    guai.style.left = 248 + "px";
+                }, 8500)
+
+            }, 8500)
+        })
+
+

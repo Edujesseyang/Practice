@@ -17,4 +17,4 @@
 // console.log(multiple(1,4));
 
 
-setInterval(console.log("12"), 1000);
+// setInterval(console.log("12"), 1000);

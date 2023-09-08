@@ -35,7 +35,8 @@
   //先在 ajaxUtils 这个obj下创建一个名叫 sendGETRequest 的方法函数. 用来发送 GET 请求.
 
   ajaxUtils.sendGETRequest =//创建这个子 object ,其工作方式如下:
-    function (requstUrl, responseHandler) {//该方程有两个 arguments, 一个是请求,一个是响应.
+    function (requstUrl, responseHandler) {//该方程有三个 arguments, 一个是请求,一个是响应
+      //最后一个是判断该响应是否是Json
 
       const request = getRequest();//建立一个request 变量, 其中为 step2 中的新 XML object.
       // 调用 getRequest 函数来获取一个 XMLHttpRequest 对象，并将其存储在名为 request 的变量中。
@@ -43,23 +44,26 @@
       request.onreadystatechange = () => {//设置 request 变量作为 ajax 对象的 status
 
         // 配置请求的回调函数，当请求状态发生变化时，将调用 hanlerResponse 函数。
-        hanlerResponse(request, responseHandler)
+        handleResponse(request, responseHandler)
       };
-      request.open('GET', requstUrl);//打开一个 GET 请求. 指定请求的url.
+      request.open('GET', requstUrl);//打开一个 GET 请求. 指定请求的url. 是否为Json为true.
       request.send(null);//发送一个不包含请求体的 GET 请求.
     }
 
   //step:4:  // 创建一个函数 hanlerResponse，用于处理响应。
-  let hanlerResponse = (request, responseHandler) => {
+  let handleResponse = (request, responseHandler) => {
 
     //  检查请求的状态和响应的状态码。
     if ((request.readyState == 4) && (request.status == 200)) {
-
       // 如果请求状态为 4（已完成）且响应状态码为 200（成功）。
-      // 调用传入的 responseHandler 函数来处理响应数据。
-      responseHandler(request);
+
+
+
+      responseHandler(request); //如果响应不是json, 则直接回传响应原文.
     }
+    // 调用传入的 responseHandler 函数来处理响应数据。
   }
+
   //step 5: 将 ajaxUtils 对象附加到全局对象 global 上，以便在其他地方可以访问到这个对象。
   global.$ajaxUtils = ajaxUtils;
 })(window);//最后立即执行函数，并传入全局对象 window。

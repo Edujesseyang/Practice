@@ -1,0 +1,9 @@
+{
+    "name" : "Jesse yang",
+    "age" : 30,
+    "family" : ["lucky" , "Chole"],
+    "home" : {
+        "city" : "kaifeng",
+        "state" : "CA"
+    }
+}

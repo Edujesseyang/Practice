@@ -41,3 +41,24 @@ document.addEventListener("DOMContentLoaded",
 //request.responseText只会解析相应头为text 格式, 如果是一个img 则会出现乱码. 回头再修复此错误.
 
 //--9/7/2023
+
+
+document.addEventListener("DOMContentLoaded",
+    function (event) {
+        document.getElementById("btn3")
+            .addEventListener("click",
+                function () {
+                    $ajaxUtils.sendGETRequest("Json.txt",
+                        function (res) {
+                            let content = res.responseText;
+                            let obj = JSON.parse(content);
+                            let add = JSON.stringify(obj.home);
+
+                            document.getElementById("output")
+                                .innerHTML = "<h2>Your name is" + obj.name + "</h2>"
+                                + "<h3>Your have " + obj.family + " in your home. </br>" +
+                                "You live in " + add + "!!!</h3>";
+                            console.log(obj);
+                    })
+            })
+})

@@ -705,3 +705,27 @@
 //然后,内存addup(1)的值算addup(2),以此类推
 //最后得出addup(n)的值. 原理如loop类似. 占用更多资源.
 
+//----------------------------------------------------------------------
+// let x = 2.17;
+// let y = 9;
+// let ary = [2.29, 2.76, 3.22, 1.85, 1.15, 1.45, 2.14, 1.97, 2.68];
+// let sum = 0;
+// let avg = 0;
+// for (let i = 0; i < 9; i++) {
+//     sum = sum + ary[i];
+//     avg = sum / y;
+// }
+// let sum2 = 0;
+// let avg2 = 0;
+// console.log("sum=" + avg);
+// for (let i = 0; i < 9; i++) {
+//     sum2 = sum2 + Math.pow((ary[i] - x), 2);
+
+//     console.log(Math.pow((ary[i] - x), 2));
+
+// }
+// avg2 = sum2 / 8;
+// console.log("std=" + avg2);
+// console.log("sqr the answer=" + Math.sqrt(avg2));
+
+//----------------Above: This is a would problem in the engnineer 10 course---------
